@@ -1,0 +1,125 @@
+# =============================================================================
+# Environment & Secrets
+# =============================================================================
+.env
+.env.*
+*.env
+secrets.json
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =============================================================================
+# Jupyter Notebooks
+# =============================================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# =============================================================================
+# Virtual Environments
+# =============================================================================
+venv/
+ENV/
+env/
+.venv/
+.conda/
+conda-env/
+
+# =============================================================================
+# IDE & Editors
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# =============================================================================
+# HuggingFace & ML Model Cache
+# =============================================================================
+.cache/
+huggingface/
+transformers_cache/
+*.h5
+*.hdf5
+*.ckpt
+*.safetensors
+*.bin
+!requirements*.txt
+
+# =============================================================================
+# Data Files (Large/Generated)
+# =============================================================================
+# Arrow files (HuggingFace datasets format)
+*.arrow
+
+# Model weights and checkpoints
+checkpoints/
+models/
+*.pt
+*.pth
+
+# Temporary/intermediate data
+*.tmp
+*.temp
+temp/
+tmp/
+
+# =============================================================================
+# Logs & Outputs
+# =============================================================================
+logs/
+*.log
+wandb/
+runs/
+tensorboard/
+mlruns/
+
+# =============================================================================
+# OS Generated
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =============================================================================
+# Project-Specific (Optional - Uncomment as needed)
+# =============================================================================
+# Uncomment if you don't want to track synthetic data checkpoints:
+# data/synthetic/
+# data/synthetic_test/
+
+# Uncomment if you don't want to track the filtered dataset:
+# data/ai4privacy_english_only/

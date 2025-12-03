@@ -1,0 +1,111 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "open-pii-masking-500k-ai4privacy",
+  "dataset_size": 545583128,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/ai4privacy/open-pii-masking-500k-ai4privacy@c5fd3c4cb85330b02941399f0145267d80907879/data/train/train.jsonl": {
+      "num_bytes": 565790080,
+      "checksum": null
+    },
+    "hf://datasets/ai4privacy/open-pii-masking-500k-ai4privacy@c5fd3c4cb85330b02941399f0145267d80907879/data/validation/test.jsonl": {
+      "num_bytes": 141836910,
+      "checksum": null
+    }
+  },
+  "download_size": 707626990,
+  "features": {
+    "source_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "masked_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "privacy_mask": {
+      "feature": {
+        "label": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "start": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "end": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "value": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "label_index": {
+          "dtype": "int64",
+          "_type": "Value"
+        }
+      },
+      "_type": "List"
+    },
+    "split": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "uid": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "language": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "region": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "script": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "mbert_tokens": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "mbert_token_classes": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "List"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 1253210118,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 436146701,
+      "num_examples": 464150,
+      "dataset_name": "open-pii-masking-500k-ai4privacy"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 109436427,
+      "num_examples": 116077,
+      "dataset_name": "open-pii-masking-500k-ai4privacy"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

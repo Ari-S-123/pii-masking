@@ -1,0 +1,465 @@
+{
+  "checkpoint_num": 9999,
+  "timestamp": "2025-12-03T22:05:48.305814",
+  "stats": {
+    "total_attempts": 10,
+    "successful": 10,
+    "failed": 0,
+    "by_dimension": {
+      "noisy": 2,
+      "multilingual": 1,
+      "evolving": 3,
+      "contextual": 2,
+      "basic": 2
+    },
+    "by_pii_type": {
+      "NATIONAL_IDENTITY_SSN_AADHAR": 1,
+      "DRIVER_LICENSE": 1,
+      "PHONE": 2,
+      "BANK_ACCOUNT": 2,
+      "OTHER_NATIONAL_IDENTITY": 1,
+      "DATE_OF_BIRTH": 1,
+      "NAMES_OF_PLACES_OR_NOUNS": 1,
+      "BANK_UPI_ID": 1
+    },
+    "by_locale": {
+      "en_CA": 2,
+      "nl_NL": 1,
+      "fr_FR": 1,
+      "de_DE": 1,
+      "it_IT": 1,
+      "es_ES": 1,
+      "en_US": 2,
+      "en_IN": 1
+    },
+    "batches_processed": 1,
+    "start_time": 1764799539.8377323
+  },
+  "samples": [
+    {
+      "text": "hey mike  just got ur call abt the new hire docs  SIN is 948-39-8491  full name Johnathan R. Sm1th dob 12/15/1982  phone 416-555-01987  addy 123 Oak St Tor0nto ON  M5V2T6  plz verify asap thx!  cc: hr@compny.ca",
+      "entities": [
+        {
+          "start": 57,
+          "end": 68,
+          "label": "NATIONAL_IDENTITY_SSN_AADHAR",
+          "text": "948-39-8491"
+        },
+        {
+          "start": 80,
+          "end": 98,
+          "label": "PERSON_FULL_NAME",
+          "text": "Johnathan R. Sm1th"
+        },
+        {
+          "start": 103,
+          "end": 113,
+          "label": "DATE_OF_BIRTH",
+          "text": "12/15/1982"
+        },
+        {
+          "start": 121,
+          "end": 134,
+          "label": "PHONE_NUMBER",
+          "text": "416-555-01987"
+        }
+      ],
+      "feature_dimension": "noisy",
+      "seed_pii_type": "NATIONAL_IDENTITY_SSN_AADHAR",
+      "seed_pii_value": "948-39-8491",
+      "seed_pii_locale": "en_CA",
+      "scenario": "Hastily typed customer service chat with typos, OCR errors, and informal abbreviations about verifying new hire documents",
+      "type_variant": "standard",
+      "generation_id": "noisy_NATIONAL_IDENTITY_SSN_AADHAR_753e19a4",
+      "timestamp": "2025-12-03T22:05:48.304903"
+    },
+    {
+      "text": "hey jan, kan je even checken die scan van je rijbewijs? driver license nr H1120499 staat erop, maar wat is je geboortedatum 12-05-1987 en adres Pieter de Hoochstr 45 2517JX Den Haag? oh en je BSN was  234567890 ik denk lol, bel asap want DMV belt morgen 071-2345678 !",
+      "entities": [
+        {
+          "start": 74,
+          "end": 82,
+          "label": "DRIVER_LICENSE",
+          "text": "H1120499"
+        },
+        {
+          "start": 124,
+          "end": 134,
+          "label": "DATE_OF_BIRTH",
+          "text": "12-05-1987"
+        },
+        {
+          "start": 144,
+          "end": 165,
+          "label": "STREET_ADDRESS",
+          "text": "Pieter de Hoochstr 45"
+        },
+        {
+          "start": 166,
+          "end": 172,
+          "label": "POSTAL_CODE",
+          "text": "2517JX"
+        },
+        {
+          "start": 173,
+          "end": 181,
+          "label": "CITY",
+          "text": "Den Haag"
+        },
+        {
+          "start": 201,
+          "end": 210,
+          "label": "BSN",
+          "text": "234567890"
+        },
+        {
+          "start": 254,
+          "end": 265,
+          "label": "PHONE_NUMBER",
+          "text": "071-2345678"
+        }
+      ],
+      "feature_dimension": "noisy",
+      "seed_pii_type": "DRIVER_LICENSE",
+      "seed_pii_value": "H1120499",
+      "seed_pii_locale": "nl_NL",
+      "scenario": "Hastily typed customer service chat about verifying a scanned Dutch driver's license with OCR artifacts, typos, and informal abbreviations",
+      "type_variant": "standard",
+      "generation_id": "noisy_DRIVER_LICENSE_1f7b5380",
+      "timestamp": "2025-12-03T22:05:48.304945"
+    },
+    {
+      "text": "Dear Mr. Dupont, thank you for your recent inquiry regarding our Paris office. Please contact our landline at 0483491955 for further assistance. Your account details are as follows: IBAN FR7612345689012345678901234, French social security number 1 85 06 123 456 789, and delivery address: 12 Rue de la Paix, 75002 Paris. Best regards, Sophie Martin (email: sophie.martin@entreprise.fr).",
+      "entities": [
+        {
+          "start": 110,
+          "end": 120,
+          "label": "PHONE",
+          "text": "0483491955"
+        },
+        {
+          "start": 187,
+          "end": 214,
+          "label": "IBAN",
+          "text": "FR7612345689012345678901234"
+        },
+        {
+          "start": 246,
+          "end": 265,
+          "label": "SSN_FR",
+          "text": "1 85 06 123 456 789"
+        },
+        {
+          "start": 308,
+          "end": 313,
+          "label": "POSTCODE",
+          "text": "75002"
+        }
+      ],
+      "feature_dimension": "multilingual",
+      "seed_pii_type": "PHONE",
+      "seed_pii_value": "0483491955",
+      "seed_pii_locale": "fr_FR",
+      "scenario": "Customer service email from a French company providing contact and account details",
+      "type_variant": "landline",
+      "generation_id": "multilingual_PHONE_33b0de64",
+      "timestamp": "2025-12-03T22:05:48.304967"
+    },
+    {
+      "text": "Hi support team, I'm having trouble with my recent SEPA transfer from my German bank account DE49668649169087363624 to the recipient IBAN LT12 3456 7890 1234 5678 9012. The transaction ID is tx_7f9a2b1c3d4e5f67890abcde and the UPI reference was netbanking@paytm. Can you check the status? My phone for 2FA is +49 176 12345678. Thanks!",
+      "entities": [
+        {
+          "start": 93,
+          "end": 115,
+          "label": "BANK_ACCOUNT",
+          "text": "DE49668649169087363624"
+        },
+        {
+          "start": 138,
+          "end": 167,
+          "label": "BANK_ACCOUNT",
+          "text": "LT12 3456 7890 1234 5678 9012"
+        },
+        {
+          "start": 191,
+          "end": 218,
+          "label": "TXN_ID",
+          "text": "tx_7f9a2b1c3d4e5f67890abcde"
+        },
+        {
+          "start": 245,
+          "end": 261,
+          "label": "UPI_ID",
+          "text": "netbanking@paytm"
+        },
+        {
+          "start": 309,
+          "end": 325,
+          "label": "PHONE",
+          "text": "+49 176 12345678"
+        }
+      ],
+      "feature_dimension": "evolving",
+      "seed_pii_type": "BANK_ACCOUNT",
+      "seed_pii_value": "DE49668649169087363624",
+      "seed_pii_locale": "de_DE",
+      "scenario": "Customer contacting bank support about a failed SEPA international transfer with transaction details",
+      "type_variant": "domestic",
+      "generation_id": "evolving_BANK_ACCOUNT_c22edf63",
+      "timestamp": "2025-12-03T22:05:48.304988"
+    },
+    {
+      "text": "Hi Marco, regarding your recent transfer from UniCredit Banca, the IBAN IT39F3238327156184526519426 has been debited €1,250.00 on 15/03/2024. Please confirm receipt at your Milan branch, Via Alessandro Manzoni 23, 20121 Milano. Note: our reference code IT39A123456789 looks similar but is just internal. Best, Luca Rossi, +39 02 1234567.",
+      "entities": [
+        {
+          "start": 72,
+          "end": 99,
+          "label": "BANK_ACCOUNT",
+          "text": "IT39F3238327156184526519426"
+        },
+        {
+          "start": 3,
+          "end": 8,
+          "label": "PERSON",
+          "text": "Marco"
+        },
+        {
+          "start": 310,
+          "end": 320,
+          "label": "PERSON",
+          "text": "Luca Rossi"
+        },
+        {
+          "start": 322,
+          "end": 336,
+          "label": "PHONE",
+          "text": "+39 02 1234567"
+        },
+        {
+          "start": 130,
+          "end": 140,
+          "label": "DATE",
+          "text": "15/03/2024"
+        }
+      ],
+      "feature_dimension": "contextual",
+      "seed_pii_type": "BANK_ACCOUNT",
+      "seed_pii_value": "IT39F3238327156184526519426",
+      "seed_pii_locale": "it_IT",
+      "scenario": "Bank email confirming a transaction with customer IBAN, alongside similar-looking internal code, personal details, date, and phone for contextual disambiguation.",
+      "type_variant": "IBAN",
+      "generation_id": "contextual_BANK_ACCOUNT_4975f193",
+      "timestamp": "2025-12-03T22:05:48.305010"
+    },
+    {
+      "text": "Hola Carlos, revisando el expediente del cliente, su DNI es S43908416, emitido en Madrid el 15/03/2023. Nota: el código del producto devuelto es S4390841H, que se parece pero no es el mismo. Contacta a María González al teléfono 915 123 456 para confirmar el reembolso. Saludos, Ana.",
+      "entities": [
+        {
+          "start": 60,
+          "end": 69,
+          "label": "OTHER_NATIONAL_IDENTITY",
+          "text": "S43908416"
+        },
+        {
+          "start": 5,
+          "end": 11,
+          "label": "PERSON",
+          "text": "Carlos"
+        },
+        {
+          "start": 202,
+          "end": 216,
+          "label": "PERSON",
+          "text": "María González"
+        },
+        {
+          "start": 229,
+          "end": 240,
+          "label": "PHONE",
+          "text": "915 123 456"
+        },
+        {
+          "start": 279,
+          "end": 282,
+          "label": "PERSON",
+          "text": "Ana"
+        }
+      ],
+      "feature_dimension": "contextual",
+      "seed_pii_type": "OTHER_NATIONAL_IDENTITY",
+      "seed_pii_value": "S43908416",
+      "seed_pii_locale": "es_ES",
+      "scenario": "Internal customer service email in Spain distinguishing a real DNI from a similar-looking product code",
+      "type_variant": "standard",
+      "generation_id": "contextual_OTHER_NATIONAL_IDENTITY_ddca9988",
+      "timestamp": "2025-12-03T22:05:48.305031"
+    },
+    {
+      "text": "Hey support, I'm setting up my new Coinbase account but verification is stuck. My DOB is 08/23/2007 and full name is Ethan M. Leclerc from 1425 Yonge St, Toronto, ON M4T 1Y7. Wallet address: bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh. UPI for payments: ethanleclerc@paytm. Sent the 2FA code 483920 already, what's next?",
+      "entities": [
+        {
+          "start": 89,
+          "end": 99,
+          "label": "DATE_OF_BIRTH",
+          "text": "08/23/2007"
+        },
+        {
+          "start": 139,
+          "end": 173,
+          "label": "ADDRESS",
+          "text": "1425 Yonge St, Toronto, ON M4T 1Y7"
+        },
+        {
+          "start": 191,
+          "end": 233,
+          "label": "CRYPTO_WALLET",
+          "text": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+        },
+        {
+          "start": 253,
+          "end": 271,
+          "label": "UPI_ID",
+          "text": "ethanleclerc@paytm"
+        },
+        {
+          "start": 291,
+          "end": 297,
+          "label": "TWO_FA_CODE",
+          "text": "483920"
+        }
+      ],
+      "feature_dimension": "evolving",
+      "seed_pii_type": "DATE_OF_BIRTH",
+      "seed_pii_value": "08/23/2007",
+      "seed_pii_locale": "en_CA",
+      "scenario": "User contacting crypto exchange support for account verification, providing DOB and modern digital identifiers",
+      "type_variant": "standard",
+      "generation_id": "evolving_DATE_OF_BIRTH_a70d50b5",
+      "timestamp": "2025-12-03T22:05:48.305049"
+    },
+    {
+      "text": "Hey @TechSupportGuru, I'm having trouble with my crypto wallet in Christopherburgh. Can't send 0.5 BTC from bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh to my buddy's address bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq. My 2FA code is 847392 and UPI is john.doe@paytm for backup payments. Pls help ASAP!",
+      "entities": [
+        {
+          "start": 66,
+          "end": 82,
+          "label": "NAMES_OF_PLACES_OR_NOUNS",
+          "text": "Christopherburgh"
+        },
+        {
+          "start": 4,
+          "end": 20,
+          "label": "USERNAME",
+          "text": "@TechSupportGuru"
+        },
+        {
+          "start": 108,
+          "end": 150,
+          "label": "CRYPTO_WALLET",
+          "text": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+        },
+        {
+          "start": 173,
+          "end": 215,
+          "label": "CRYPTO_WALLET",
+          "text": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq"
+        },
+        {
+          "start": 232,
+          "end": 238,
+          "label": "TOTP",
+          "text": "847392"
+        },
+        {
+          "start": 250,
+          "end": 264,
+          "label": "UPI_ID",
+          "text": "john.doe@paytm"
+        }
+      ],
+      "feature_dimension": "evolving",
+      "seed_pii_type": "NAMES_OF_PLACES_OR_NOUNS",
+      "seed_pii_value": "Christopherburgh",
+      "seed_pii_locale": "en_US",
+      "scenario": "User seeking tech support for cryptocurrency wallet transaction issue via social media, mentioning location and digital payment details",
+      "type_variant": "standard",
+      "generation_id": "evolving_NAMES_OF_PLACES_OR_NOUNS_1bc9e22b",
+      "timestamp": "2025-12-03T22:05:48.305069"
+    },
+    {
+      "text": "Dear Urvashi Narain,\n\nThank you for completing your bank account linkage. Your UPI ID is now active:\n\nUPI ID: narainurvashi@phonepe\nAccount Number: 123456789012\nIFSC Code: SBIN0001234\nMobile Number: +91 98765 43210\n\nYou can now make payments using PhonePe. For support, contact 1800-123-4567.\n\nBest regards,\nPhonePe Team",
+      "entities": [
+        {
+          "start": 110,
+          "end": 131,
+          "label": "BANK_UPI_ID",
+          "text": "narainurvashi@phonepe"
+        },
+        {
+          "start": 148,
+          "end": 160,
+          "label": "BANK_ACCOUNT_NUMBER",
+          "text": "123456789012"
+        },
+        {
+          "start": 172,
+          "end": 183,
+          "label": "BANK_IFSC_CODE",
+          "text": "SBIN0001234"
+        },
+        {
+          "start": 199,
+          "end": 214,
+          "label": "PHONE_NUMBER",
+          "text": "+91 98765 43210"
+        }
+      ],
+      "feature_dimension": "basic",
+      "seed_pii_type": "BANK_UPI_ID",
+      "seed_pii_value": "narainurvashi@phonepe",
+      "seed_pii_locale": "en_IN",
+      "scenario": "Bank UPI activation confirmation email from PhonePe",
+      "type_variant": "standard",
+      "generation_id": "basic_BANK_UPI_ID_e3f030c1",
+      "timestamp": "2025-12-03T22:05:48.305086"
+    },
+    {
+      "text": "Customer Registration Confirmation\n\nDear John Smith,\n\nThank you for registering with our service. Here are your account details:\n\nName: John Smith\nEmail: john.smith@email.com\nPhone: 001-492-686-1703x36902\nAddress: 123 Main St, Springfield, IL 62701\n\nPlease save this information for your records.\n\nBest regards,\nCustomer Support",
+      "entities": [
+        {
+          "start": 41,
+          "end": 51,
+          "label": "NAME",
+          "text": "John Smith"
+        },
+        {
+          "start": 154,
+          "end": 174,
+          "label": "EMAIL",
+          "text": "john.smith@email.com"
+        },
+        {
+          "start": 182,
+          "end": 204,
+          "label": "PHONE",
+          "text": "001-492-686-1703x36902"
+        },
+        {
+          "start": 214,
+          "end": 248,
+          "label": "ADDRESS",
+          "text": "123 Main St, Springfield, IL 62701"
+        }
+      ],
+      "feature_dimension": "basic",
+      "seed_pii_type": "PHONE",
+      "seed_pii_value": "001-492-686-1703x36902",
+      "seed_pii_locale": "en_US",
+      "scenario": "Customer registration confirmation email with contact details",
+      "type_variant": "with extension",
+      "generation_id": "basic_PHONE_e295a2d5",
+      "timestamp": "2025-12-03T22:05:48.305102"
+    }
+  ],
+  "failed_task_count": 0
+}
