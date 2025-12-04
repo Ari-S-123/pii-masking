@@ -114,12 +114,5 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# =============================================================================
-# Project-Specific (Optional - Uncomment as needed)
-# =============================================================================
-# Uncomment if you don't want to track synthetic data checkpoints:
-# data/synthetic/
-# data/synthetic_test/
-
-# Uncomment if you don't want to track the filtered dataset:
-# data/ai4privacy_english_only/
+# The fake api keys were causing issues with the secret scanning, so I'm ignoring all the data.
+data/
